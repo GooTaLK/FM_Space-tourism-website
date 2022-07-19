@@ -1,8 +1,3 @@
 {
-  "extends": [
-    "standard-with-typescript",
-    "standard-jsx",
-    "prettier",
-    "next/core-web-vitals"
-  ]
+  "extends": ["standard", "standard-jsx", "prettier", "next/core-web-vitals"]
 }
