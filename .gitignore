@@ -33,3 +33,13 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# more
+/design
+.DS_Store
+.fig
+.sketch
+.xd
+
+# hidden files
+*.hifi.*
