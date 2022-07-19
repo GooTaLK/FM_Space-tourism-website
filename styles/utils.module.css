@@ -1,0 +1,42 @@
+.heading1 {
+  font-family: Bellefair, serif;
+  font-size: 150px;
+}
+
+.heading2 {
+  font-family: Bellefair, serif;
+  font-size: 100px;
+}
+
+.heading3 {
+  font-family: Bellefair, serif;
+  font-size: 56px;
+}
+
+.heading4 {
+  font-family: Bellefair, serif;
+  font-size: 32px;
+}
+
+.heading5 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  letter-spacing: 4.75px;
+}
+
+.subHeading1 {
+  font-family: Bellefair, serif;
+  font-size: 28px;
+}
+
+.subHeading2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2.35px;
+}
+
+.navText {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+}
