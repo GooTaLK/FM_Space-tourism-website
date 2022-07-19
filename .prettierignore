@@ -1,0 +1,6 @@
+# pnpm-lock
+pnpm-lock.yaml
+
+# next
+/.next
+next*
