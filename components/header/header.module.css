@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 40px;
+  margin-left: 55px;
+}
+
+.line {
+  position: relative;
+  z-index: 10;
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 64px;
+  background-color: hsla(0, 0%, 100%, 0.5);
+}
+
+@media (max-width: 1439px) {
+  .header {
+    margin-top: 0;
+    margin-left: 39px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    margin-top: 24px;
+    margin-left: 24px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+}
