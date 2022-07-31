@@ -35,8 +35,6 @@
   letter-spacing: 2.35px;
 }
 
-.navText {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px;
-  letter-spacing: 2.7px;
+.grayText {
+  color: var(--light-gray);
 }
