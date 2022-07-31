@@ -5,9 +5,12 @@
 body {
   min-height: 100vh;
   margin: 0;
+  overflow-x: hidden;
   background-color: var(--dark);
+  color: var(--white);
   font-family: Barllow, system-ui, sans-serif;
   font-size: 18px;
+  line-height: 32px;
 }
 
 a {
