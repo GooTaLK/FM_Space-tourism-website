@@ -46,18 +46,18 @@
 
   .heading5 {
     font-size: 20px;
-    line-height: 3.38px;
+    letter-spacing: 3.38px;
   }
 }
 
 @media (max-width: 767px) {
   .heading1 {
-    font-size: 80;
+    font-size: 80px;
     line-height: 100px;
   }
 
   .heading5 {
     font-size: 16px;
-    line-height: 2.7px;
+    letter-spacing: 2.7px;
   }
 }
