@@ -3,6 +3,7 @@
   align-items: flex-end;
   justify-content: space-between;
   margin-top: 250px;
+  margin-bottom: 132px;
   margin-inline: 165px;
 }
 
@@ -13,16 +14,53 @@
   width: min-content;
 }
 
+.heroTitle {
+  padding-inline: 13px;
+}
+
 .button {
   width: 274px;
   height: 274px;
   border: none;
   outline: none;
   border-radius: 50%;
+  color: var(--dark);
+  font-size: 32px;
+  font-family: Bellefair;
+  letter-spacing: 2px;
   transition: box-shadow 250ms ease-in-out;
+  cursor: pointer;
 }
 
 .button:hover,
 .button:focus {
   box-shadow: 0 0 0 88px hsla(0, 0%, 100%, 0.1);
+}
+
+@media (max-width: 1439px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 108px;
+    margin-bottom: 90px;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .button {
+    width: 242px;
+    height: 242px;
+    margin-top: 160px;
+  }
+}
+
+@media (max-width: 767px) {
+  .button {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+    letter-spacing: 1.25px;
+  }
 }
