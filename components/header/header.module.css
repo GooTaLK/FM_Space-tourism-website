@@ -12,7 +12,7 @@
   flex-grow: 1;
   height: 1px;
   margin-left: 64px;
-  background-color: hsla(0, 0%, 100%, 0.5);
+  background-color: hsla(0, 0%, 100%, 0.25);
 }
 
 @media (max-width: 1439px) {
