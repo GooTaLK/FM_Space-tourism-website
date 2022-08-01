@@ -10,7 +10,6 @@ body {
   color: var(--white);
   font-family: Barllow, system-ui, sans-serif;
   font-size: 18px;
-  line-height: 32px;
 }
 
 a {
@@ -30,6 +29,7 @@ h6 {
 
 p {
   margin-block: 0;
+  line-height: 32px;
 }
 
 img {
@@ -41,4 +41,24 @@ img {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+@media (max-width: 1439px) {
+  body {
+    font-size: 16px;
+  }
+
+  p {
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+
+  p {
+    line-height: 25px;
+  }
 }
