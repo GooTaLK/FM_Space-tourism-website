@@ -1,4 +1,5 @@
-import { type RefObject, useLayoutEffect, useRef } from 'react'
+import { type RefObject, useRef } from 'react'
+import { useLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect'
 
 export function useResizeObserver(
   action: (c: any) => void,
