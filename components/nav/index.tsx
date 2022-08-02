@@ -1,8 +1,9 @@
-import { type RefObject, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import cn from 'classnames'
 import styles from './nav.module.css'
 import { useResizeObserver } from '@/hooks/useResizeObserver'
+import useActiveTabMark from '@/hooks/useActiveTabMark'
 import { capitalize } from '@/utils/capitalize'
 
 type Tab = 'home' | 'destination' | 'crew' | 'technology'
@@ -11,7 +12,6 @@ const tabNames = ['Home', 'Destination', 'Crew', 'Technology']
 let currentTab: Tab
 
 function Nav({ tab }: { tab: Tab }) {
-  const activeBarRef = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -21,23 +21,22 @@ function Nav({ tab }: { tab: Tab }) {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const { ActiveBar, updatePosition } = useActiveTabMark('horizontal')
+
   useResizeObserver((contentRect) => {
     const isMobileScreen = (contentRect.width ?? contentRect.inlineSize) < 300
 
     if (isMobileScreen) {
-      moveActiveBarToTabPosition(activeBarRef, 'vertical')
+      updatePosition(currentTab, 'vertical')
       setIsMenuOpen(false)
     } else {
-      moveActiveBarToTabPosition(activeBarRef, 'horizontal')
+      updatePosition(currentTab, 'horizontal')
     }
   }, containerRef)
 
   useEffect(() => {
     const isVertical = window.innerWidth < 768
-    moveActiveBarToTabPosition(
-      activeBarRef,
-      isVertical ? 'vertical' : 'horizontal'
-    )
+    updatePosition(currentTab, isVertical ? 'vertical' : 'horizontal')
   }, [tab])
 
   return (
@@ -54,7 +53,7 @@ function Nav({ tab }: { tab: Tab }) {
               return (
                 <li
                   className={tab === tabName ? 'active' : undefined}
-                  data-nav-tab={tabName}
+                  data-tab-name={tabName}
                   key={index}
                 >
                   <Link href={tabName === 'home' ? '/' : `/${tabName}`}>
@@ -68,7 +67,7 @@ function Nav({ tab }: { tab: Tab }) {
             })}
           </ul>
         </nav>
-        <div className={styles.activeBar} ref={activeBarRef} />
+        {ActiveBar}
       </div>
       <div
         className={cn(styles.openIcon, {
@@ -80,33 +79,6 @@ function Nav({ tab }: { tab: Tab }) {
       </div>
     </>
   )
-}
-
-function moveActiveBarToTabPosition(
-  activeBarRef: RefObject<HTMLElement>,
-  direction: 'horizontal' | 'vertical' = 'horizontal'
-) {
-  console.log(currentTab)
-  const containerDOMRef = activeBarRef.current?.parentElement
-  const tabDOMRef = containerDOMRef?.querySelector(
-    `[data-nav-tab='${currentTab}']`
-  )
-  if (!containerDOMRef || !tabDOMRef) return
-
-  console.log(direction)
-  const { top, left, width, height } = tabDOMRef.getBoundingClientRect()
-  const containerLeftOffset = containerDOMRef.offsetLeft
-  const containerTopOffset = containerDOMRef.offsetTop
-  const x = left - containerLeftOffset
-  const y = top - containerTopOffset
-
-  if (direction === 'horizontal') {
-    activeBarRef.current?.style.setProperty('--x', `${x}px`)
-    activeBarRef.current?.style.setProperty('--width', `${width}px`)
-  } else {
-    activeBarRef.current?.style.setProperty('--y', `${y}px`)
-    activeBarRef.current?.style.setProperty('--height', `${height}px`)
-  }
 }
 
 function confirmTabType(name?: string): name is Tab {

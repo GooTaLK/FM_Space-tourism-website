@@ -50,18 +50,6 @@
   padding-right: 11px;
 }
 
-.activeBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: var(--width);
-  height: 3px;
-  background-color: var(--white);
-  transform: translate(var(--x), 0);
-  transition-property: transform, width, height;
-  transition-duration: 0.3s;
-}
-
 .openIcon {
   position: fixed;
   top: 28px;
@@ -147,16 +135,6 @@
 
   .container.open {
     transform: translateX(-100%);
-  }
-
-  .activeBar {
-    top: 0;
-    bottom: auto;
-    left: auto;
-    right: 0;
-    width: 4px;
-    height: var(--height);
-    transform: translate(0, var(--y));
   }
 
   .nav {
