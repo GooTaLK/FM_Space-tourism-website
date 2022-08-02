@@ -3,6 +3,7 @@ import Link from 'next/link'
 import cn from 'classnames'
 import styles from './nav.module.css'
 import { useResizeObserver } from '@/hooks/useResizeObserver'
+import { capitalize } from '@/utils/capitalize'
 
 type Tab = 'home' | 'destination' | 'crew' | 'technology'
 
@@ -110,7 +111,7 @@ function moveActiveBarToTabPosition(
 
 function confirmTabType(name?: string): name is Tab {
   if (typeof name === 'undefined') return false
-  if (tabNames.includes(name)) return true
+  if (tabNames.includes(capitalize(name))) return true
 
   return false
 }
