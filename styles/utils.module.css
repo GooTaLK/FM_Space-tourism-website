@@ -39,6 +39,10 @@
   color: var(--light-gray);
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 @media (max-width: 1439px) {
   .heading1 {
     line-height: 150px;
