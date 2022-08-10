@@ -1,0 +1,76 @@
+.container {
+  position: relative;
+  width: 50%;
+  margin-left: 50%;
+  padding-top: 45px;
+  padding-left: 110px;
+}
+
+.image {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: -100%;
+  right: 100%;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.separator {
+  height: 1px;
+  margin-top: 54px;
+  margin-bottom: 28px;
+  background-color: #383b4b;
+  border: none;
+}
+
+.measures {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.measureTitle {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 1439px) {
+  .container {
+    width: 100%;
+    margin-top: 387px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    padding: 43px 58px;
+    text-align: center;
+  }
+
+  .image {
+    top: -387px;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    padding-bottom: 56px;
+  }
+
+  .image picture {
+    width: 300px;
+    height: 300px;
+  }
+
+  .title {
+    margin-bottom: 34px;
+  }
+
+  .separator {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .measures {
+    justify-content: center;
+    gap: 103px;
+  }
+}
