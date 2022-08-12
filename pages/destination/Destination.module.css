@@ -23,10 +23,10 @@
 .nav ul {
   position: relative;
   display: flex;
-  gap: 32px;
+  gap: 36px;
   margin: 0;
   padding: 0;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
   list-style: none;
 }
 
@@ -41,7 +41,7 @@
 .nav li:focus::before {
   content: '';
   position: absolute;
-  bottom: -12px;
+  bottom: -15px;
   left: 0;
   display: block;
   width: 100%;
@@ -69,6 +69,6 @@
     width: max-content;
     margin-inline: auto;
     padding-left: 0;
-    transform: translateY(356px);
+    transform: translateY(387px);
   }
 }
