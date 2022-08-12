@@ -72,3 +72,27 @@
     transform: translateY(387px);
   }
 }
+
+@media (max-width: 767px) {
+  .header {
+    margin-top: 24px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .nav {
+    font-size: 14px;
+    letter-spacing: 2.36px;
+    transform: translateY(224px);
+  }
+
+  .nav ul {
+    gap: 27px;
+    padding-bottom: 12px;
+  }
+
+  .nav li:hover::before,
+  .nav li:focus::before {
+    bottom: -12px;
+  }
+}
