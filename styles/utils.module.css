@@ -48,6 +48,10 @@
     line-height: 150px;
   }
 
+  .heading2 {
+    font-size: 80px;
+  }
+
   .heading5 {
     font-size: 20px;
     letter-spacing: 3.38px;
@@ -58,6 +62,10 @@
   .heading1 {
     font-size: 80px;
     line-height: 100px;
+  }
+
+  .heading2 {
+    font-size: 56px;
   }
 
   .heading5 {
