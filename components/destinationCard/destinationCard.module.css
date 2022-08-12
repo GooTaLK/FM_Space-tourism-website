@@ -40,19 +40,19 @@
 @media (max-width: 1439px) {
   .container {
     width: 100%;
-    margin-top: 387px;
-    margin-bottom: 20px;
+    margin-top: 419px;
+    margin-bottom: 63px;
     margin-left: 0;
-    padding: 43px 58px;
+    padding-top: 0;
+    padding-inline: 58px;
     text-align: center;
   }
 
   .image {
-    top: -387px;
+    top: -419px;
     bottom: 100%;
     left: 0;
     right: 0;
-    padding-bottom: 56px;
   }
 
   .image picture {
