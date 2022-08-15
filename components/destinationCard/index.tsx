@@ -1,18 +1,13 @@
-import { type ComponentProps } from 'react'
 import cn from 'classnames'
 import styles from './destinationCard.module.css'
 import utilsStyles from '@/styles/utils.module.css'
+import Picture, { PictureProps } from '../picture'
 
-type DestinationCardProps = {
+type DestinationCardProps = PictureProps & {
   destinyName: string
   description: string
   avgDistance: string
   avgTime: string
-  imageSrc: {
-    default: string
-    sources?: ComponentProps<'source'>[]
-  }
-  imageAlt?: string
 }
 
 function DestinationCard({
@@ -26,15 +21,10 @@ function DestinationCard({
   return (
     <section className={styles.container}>
       <div className={styles.image}>
-        <picture>
-          {imageSrc.sources?.map((props, index) => (
-            <source {...props} key={index} />
-          ))}
-          <img
-            src={imageSrc.default}
-            alt={imageAlt || 'Image of travel destiny'}
-          />
-        </picture>
+        <Picture
+          imageSrc={imageSrc}
+          imageAlt={imageAlt || 'Image of travel destiny'}
+        />
       </div>
       <h1
         className={cn(
