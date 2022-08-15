@@ -151,6 +151,8 @@ const Destination: NextPageWithTitle = () => {
   )
 }
 
+Destination.title = 'Destination'
+
 function confirmDestinyType(destiny: string): destiny is Destiny {
   return destinies.includes(destiny)
 }
