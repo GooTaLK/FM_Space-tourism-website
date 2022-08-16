@@ -1,0 +1,26 @@
+.container {
+  width: 50%;
+  padding-top: 69px;
+}
+
+.image {
+  position: fixed;
+  bottom: -5px;
+  left: 50%;
+  right: 55px;
+  display: flex;
+  justify-content: center;
+}
+
+.role {
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+
+.crewmateName {
+  margin-bottom: 37px;
+}
+
+.bio {
+  width: 444px;
+}
