@@ -1,0 +1,35 @@
+.container {
+  padding-bottom: 229px;
+}
+
+.nav {
+  transform: translateY(475px);
+}
+
+.nav ul {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav li {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: var(--white);
+  border-radius: 50%;
+  opacity: 0.17;
+  transition: opacity 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.nav li:hover,
+.nav li:focus {
+  opacity: 0.5;
+}
+
+.nav li.active {
+  opacity: 1;
+}
