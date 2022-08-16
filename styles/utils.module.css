@@ -43,6 +43,21 @@
   text-transform: uppercase;
 }
 
+.pageContainer {
+  margin-inline: 167px;
+}
+
+.pageHeaderContainer {
+  margin-top: 80px;
+  margin-bottom: 70px;
+}
+
+.pageHeaderIndex {
+  padding-right: 28px;
+  font-weight: 700;
+  opacity: 0.25;
+}
+
 @media (max-width: 1439px) {
   .heading1 {
     line-height: 150px;
@@ -55,6 +70,15 @@
   .heading5 {
     font-size: 20px;
     letter-spacing: 3.38px;
+  }
+
+  .pageContainer {
+    margin-inline: 39px;
+  }
+
+  .pageHeaderContainer {
+    margin-top: 45px;
+    margin-bottom: 30px;
   }
 }
 
@@ -71,5 +95,15 @@
   .heading5 {
     font-size: 16px;
     letter-spacing: 2.7px;
+  }
+
+  .pageContainer {
+    margin-inline: 24px;
+  }
+
+  .pageHeaderContainer {
+    margin-top: 24px;
+    margin-bottom: 4px;
+    text-align: center;
   }
 }

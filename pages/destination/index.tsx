@@ -81,15 +81,16 @@ const Destination: NextPageWithTitle = () => {
           mobile: 'assets/destination/background-destination-mobile.jpg',
         }}
       />
-      <div className={styles.container}>
+      <div className={cn(styles.container, utilsStyles.pageContainer)}>
         <header
           className={cn(
             utilsStyles.heading5,
             utilsStyles.uppercase,
-            styles.header
+            utilsStyles.pageHeaderContainer
           )}
         >
-          <span className={styles.index}>01</span> Pick your destination
+          <span className={utilsStyles.pageHeaderIndex}>01</span>Pick your
+          destination
         </header>
         <nav className={cn(styles.nav, utilsStyles.uppercase)}>
           <ul>

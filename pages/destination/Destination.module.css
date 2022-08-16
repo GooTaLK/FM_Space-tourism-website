@@ -1,16 +1,5 @@
 .container {
-  margin-inline: 166px;
-  margin-bottom: 112px;
-}
-
-.header {
-  margin-top: 80px;
-  margin-bottom: 70px;
-}
-
-.index {
-  font-weight: 700;
-  opacity: 0.25;
+  padding-bottom: 112px;
 }
 
 .nav {
@@ -54,15 +43,6 @@
 }
 
 @media (max-width: 1439px) {
-  .container {
-    margin-inline: 39px;
-  }
-
-  .header {
-    margin-top: 45px;
-    margin-bottom: 30px;
-  }
-
   .nav {
     position: relative;
     z-index: 20;
@@ -74,12 +54,6 @@
 }
 
 @media (max-width: 767px) {
-  .header {
-    margin-top: 24px;
-    margin-bottom: 4px;
-    text-align: center;
-  }
-
   .nav {
     font-size: 14px;
     letter-spacing: 2.36px;

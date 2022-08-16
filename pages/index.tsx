@@ -1,7 +1,7 @@
+import cn from 'classnames'
 import styles from '@/styles/Home.module.css'
 import utilsStyles from '@/styles/utils.module.css'
 import type { NextPageWithTitle } from './_app'
-import cn from 'classnames'
 import Background from '@/components/background'
 
 const Home: NextPageWithTitle = () => {
@@ -15,7 +15,7 @@ const Home: NextPageWithTitle = () => {
         }}
         alt='The Earth planet'
       />
-      <div className={styles.container}>
+      <div className={cn(styles.container, utilsStyles.pageContainer)}>
         <header className={styles.hero}>
           <h2 className={cn(utilsStyles.heading5, utilsStyles.grayText)}>
             SO, YOU WANT TO TRAVEL TO
