@@ -49,3 +49,13 @@
     gap: 16px;
   }
 }
+
+@media (max-width: 767px) {
+  .container {
+    padding-bottom: 104px;
+  }
+
+  .nav {
+    transform: translateY(287px);
+  }
+}

@@ -43,7 +43,6 @@
   }
 
   .image {
-    position: absolute;
     top: calc(100% + 90px);
     bottom: auto;
     left: 0;
@@ -65,5 +64,31 @@
   .bio {
     width: 458px;
     margin-inline: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-top: 0;
+  }
+
+  .image {
+    position: relative;
+    margin-top: 22px;
+    margin-bottom: 74px;
+    box-shadow: 0 1px #383b4b;
+  }
+
+  .image picture {
+    height: 222px;
+  }
+
+  .image img {
+    width: auto;
+    height: 100%;
+  }
+
+  .bio {
+    width: 100%;
   }
 }
