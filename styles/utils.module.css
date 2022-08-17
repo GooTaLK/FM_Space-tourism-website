@@ -67,6 +67,14 @@
     font-size: 80px;
   }
 
+  .heading3 {
+    font-size: 40px;
+  }
+
+  .heading4 {
+    font-size: 24px;
+  }
+
   .heading5 {
     font-size: 20px;
     letter-spacing: 3.38px;
@@ -90,6 +98,14 @@
 
   .heading2 {
     font-size: 56px;
+  }
+
+  .heading3 {
+    font-size: 24px;
+  }
+
+  .heading4 {
+    font-size: 16px;
   }
 
   .heading5 {
