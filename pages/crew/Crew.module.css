@@ -32,3 +32,20 @@
 .nav li.active {
   opacity: 1;
 }
+
+@media (max-width: 1439px) {
+  .container {
+    padding-bottom: 622px;
+  }
+
+  .nav {
+    width: max-content;
+    margin-inline: auto;
+    transform: translateY(284px);
+    --size: 10px;
+  }
+
+  .nav ul {
+    gap: 16px;
+  }
+}

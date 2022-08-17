@@ -33,3 +33,37 @@
 .bio {
   width: 444px;
 }
+
+@media (max-width: 1439px) {
+  .container {
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .image {
+    position: absolute;
+    top: calc(100% + 90px);
+    bottom: auto;
+    left: 0;
+    right: 0;
+  }
+
+  .image picture {
+    width: 458px;
+  }
+
+  .role {
+    margin-bottom: 8px;
+  }
+
+  .crewmateName {
+    margin-bottom: 16px;
+  }
+
+  .bio {
+    width: 458px;
+    margin-inline: auto;
+  }
+}
