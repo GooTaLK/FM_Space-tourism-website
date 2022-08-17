@@ -1,13 +1,13 @@
 .container {
   width: 50%;
-  padding-top: 69px;
+  padding-top: 75px;
 }
 
 .image {
   position: fixed;
   bottom: -5px;
   left: 50%;
-  right: 55px;
+  right: 167px;
   display: flex;
   justify-content: center;
 }
@@ -19,6 +19,7 @@
 
 .crewmateName {
   margin-bottom: 37px;
+  white-space: nowrap;
 }
 
 .bio {
