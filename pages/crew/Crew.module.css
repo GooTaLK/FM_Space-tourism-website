@@ -1,9 +1,8 @@
-.container {
-  padding-bottom: 229px;
-}
-
 .nav {
+  position: relative;
+  z-index: 20;
   transform: translateY(481px);
+  --size: 15px;
 }
 
 .nav ul {
@@ -16,8 +15,8 @@
 
 .nav li {
   display: block;
-  width: 15px;
-  height: 15px;
+  width: var(--size);
+  height: var(--size);
   background-color: var(--white);
   border-radius: 50%;
   opacity: 0.17;
