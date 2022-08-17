@@ -135,7 +135,7 @@ const Crew: NextPageWithTitle = () => {
                 srcSet: getCrewData('images', 'png'),
               },
               {
-                srcSet: getCrewData('images', 'png'),
+                srcSet: getCrewData('images', 'webp'),
               },
             ],
           }}
