@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  margin-right: -167px;
+  padding-top: 73px;
+  padding-left: 160px;
+}
+
+.image {
+  order: 1;
+  align-self: flex-end;
+  width: 515px;
+  margin-top: -111px;
+  margin-left: auto;
+}
+
+.data {
+  width: 444px;
+}
+
+.data h1 {
+  margin-top: 11px;
+  margin-bottom: 17px;
+  white-space: nowrap;
+}
