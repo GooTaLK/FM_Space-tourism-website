@@ -5,6 +5,7 @@
 .nav {
   height: 0;
   transform: translateY(73px);
+  --size: 80px;
 }
 
 .nav ul {
@@ -19,8 +20,8 @@
 .nav li {
   display: grid;
   place-items: center;
-  width: 80px;
-  height: 80px;
+  width: var(--size);
+  height: var(--size);
   border: 1px solid hsla(0, 0%, 100%, 0.25);
   border-radius: 50%;
   cursor: pointer;
