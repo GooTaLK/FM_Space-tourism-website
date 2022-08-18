@@ -1,13 +1,13 @@
-import { type MouseEventHandler, useEffect, useRef, useState } from 'react'
+import { type MouseEventHandler, useEffect, useState } from 'react'
 import cn from 'classnames'
 import utilsStyles from '@/styles/utils.module.css'
 import styles from './Destination.module.css'
 import Background from '@/components/background'
 import DestinationCard from '@/components/destinationCard'
 import type { NextPageWithTitle } from '../_app'
-import data from '@/data/data.json'
 import { capitalize } from '@/utils/capitalize'
 import useActiveTabMark from '@/hooks/useActiveTabMark'
+import useSpacetourismData from '@/hooks/useSpaceTourismData'
 
 type Destiny = 'moon' | 'mars' | 'europa' | 'titan'
 
@@ -15,42 +15,19 @@ type DestinationStates = {
   currentDestiny: Destiny
 }
 
-type DestinationData = {
-  name: string
-  images: {
-    png: string
-    webp: string
-  }
-  description: string
-  distance: string
-  travel: string
-}
-
 const destinies = ['moon', 'mars', 'europa', 'titan']
 
 const Destination: NextPageWithTitle = () => {
-  const destinyDataRef = useRef<DestinationData[]>(data.destinations)
-  const destinyDataIndexRef = useRef(0)
   const [currentDestiny, setCurrentDestiny] =
     useState<DestinationStates['currentDestiny']>('moon')
 
   const { ActiveBar, updatePosition } = useActiveTabMark('horizontal')
 
-  function getDestinyData(
-    property: keyof DestinationData,
-    property2?: keyof DestinationData['images']
-  ) {
-    if (property === 'images') {
-      if (property2) {
-        return destinyDataRef.current[destinyDataIndexRef.current][property][
-          property2
-        ]
-      }
-      return 'No image defined'
-    }
-
-    return destinyDataRef.current[destinyDataIndexRef.current][property]
-  }
+  const {
+    dataRef: destinyDataRef,
+    dataIndexRef: destinyDataIndexRef,
+    getData: getDestinyData,
+  } = useSpacetourismData({ type: 'destinations' })
 
   const handleClickTab: MouseEventHandler<HTMLLIElement> = ({
     currentTarget,

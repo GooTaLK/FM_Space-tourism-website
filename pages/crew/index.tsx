@@ -1,11 +1,11 @@
-import { MouseEventHandler, useRef, useState } from 'react'
+import { type MouseEventHandler, useState } from 'react'
 import cn from 'classnames'
 import styles from './Crew.module.css'
 import utilsStyles from '@/styles/utils.module.css'
 import type { NextPageWithTitle } from '../_app'
 import Background from '@/components/background'
 import CrewCard from '@/components/crewCard'
-import data from '@/data/data.json'
+import useSpacetourismData from '@/hooks/useSpaceTourismData'
 
 type Crewmate =
   | 'Douglas Hurley'
@@ -17,16 +17,6 @@ type CrewStates = {
   currentCrewmate: Crewmate
 }
 
-type CrewData = {
-  name: string
-  images: {
-    png: string
-    webp: string
-  }
-  role: string
-  bio: string
-}
-
 const crewmates = [
   'Douglas Hurley',
   'Mark Shuttleworth',
@@ -35,26 +25,14 @@ const crewmates = [
 ]
 
 const Crew: NextPageWithTitle = () => {
-  const crewDataRef = useRef<CrewData[]>(data.crew)
-  const crewDataIndexRef = useRef(0)
   const [currentCrewmate, setCurrentCrewmate] =
     useState<CrewStates['currentCrewmate']>('Douglas Hurley')
 
-  function getCrewData(
-    property: keyof CrewData,
-    property2?: keyof CrewData['images']
-  ) {
-    if (property === 'images') {
-      if (property2) {
-        return crewDataRef.current[crewDataIndexRef.current][property][
-          property2
-        ]
-      }
-      return 'No image defined'
-    }
-
-    return crewDataRef.current[crewDataIndexRef.current][property]
-  }
+  const {
+    dataRef: crewDataRef,
+    dataIndexRef: crewDataIndexRef,
+    getData: getCrewData,
+  } = useSpacetourismData({ type: 'crew' })
 
   const handleClickTab: MouseEventHandler<HTMLLIElement> = ({
     currentTarget,
