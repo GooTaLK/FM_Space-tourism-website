@@ -23,3 +23,31 @@
   margin-bottom: 17px;
   white-space: nowrap;
 }
+
+@media (max-width: 1439px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-right: 0;
+    padding-top: 34px;
+    padding-left: 0;
+  }
+
+  .image {
+    width: calc(100% + 78px);
+    margin-top: 0;
+    margin-bottom: 160px;
+    margin-left: -39px;
+    margin-right: -39px;
+  }
+
+  .data {
+    width: 458px;
+    text-align: center;
+  }
+
+  .data h1 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}

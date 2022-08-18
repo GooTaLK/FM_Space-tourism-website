@@ -36,3 +36,20 @@
   background-color: var(--white);
   color: var(--dark);
 }
+
+@media (max-width: 1439px) {
+  .container {
+    padding-bottom: 97px;
+  }
+
+  .nav {
+    width: max-content;
+    margin-inline: auto;
+    transform: translateY(calc(90px + 40.3vw));
+    --size: 60px;
+  }
+
+  .nav ul {
+    flex-direction: row;
+  }
+}
