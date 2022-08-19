@@ -54,3 +54,14 @@
     gap: 16px;
   }
 }
+
+@media (max-width: 767px) {
+  .container {
+    padding-bottom: 80px;
+  }
+
+  .nav {
+    transform: translateY(calc(66px + 40.3vw));
+    --size: 40px;
+  }
+}
